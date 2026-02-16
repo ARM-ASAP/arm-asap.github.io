@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARM-ASAP</title>
+
+  <style>
+    :root {
+      --bg: #0d0d12;
+      --bg-alt: #16161f;
+      --panel: #1d1d28;
+
+      --text: #e6e6f0;
+      --muted: #8f8fa5;
+      --border: #2a2a36;
+
+      --violet: #7f5bff;
+      --violet-soft: rgba(127,91,255,0.18);
+
+      --radius: 14px;
+      --shadow: 0 8px 22px rgba(0,0,0,0.45);
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1a1a25 0%, #0d0d12 70%);
+      color: var(--text);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(13,13,18,0.75);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.8rem 1rem;
+    }
+
+    .nav {
+      max-width: 760px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background-image: url("arm-asap.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+    .nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.85rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      transition: 0.15s ease;
+    }
+
+    .nav .btn {
+      margin: 0 22px;
+    }
+
+
+    .nav a:hover {
+      background: var(--violet-soft);
+      color: var(--violet);
+    }
+
+    main {
+      max-width: 760px;
+      margin: auto;
+      padding: 1.2rem;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(127,91,255,0.12), #16161f);
+      border: 1px solid rgba(127,91,255,0.25);
+      padding: 1.3rem;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      margin-bottom: 1.6rem;
+    }
+
+    .hero h1 {
+      margin: 0 0 0.4rem;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .hero p {
+      margin: 0.3rem 0 1rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.55rem 1.1rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      border: 1px solid transparent;
+      transition: 0.15s ease;
+    }
+
+    .btn-primary {
+      background: radial-gradient(circle at top left, #5b8bff, #7f5bff);
+      color: white;
+      box-shadow: 0 10px 20px rgba(127,91,255,0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 26px rgba(127,91,255,0.45);
+    }
+
+    .btn-ghost {
+      border-color: var(--violet);
+      color: var(--violet);
+      background: transparent;
+    }
+
+    h2 {
+      margin-top: 1.4rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      padding: 1rem;
+      border-radius: var(--radius);
+      margin: 1rem 0;
+      box-shadow: var(--shadow);
+    }
+
+    /* RESPONSYWNE WIDEO */
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      margin: 1rem 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    pre {
+      background: #1a1a25;
+      color: #f8f8f2;
+      padding: 0.9rem;
+      border-radius: var(--radius);
+      overflow-x: auto;
+      font-size: 0.8rem;
+      border: 1px solid #2a2a36;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="logo">
+      <div class="logo-icon"></div>
+      ARM-ASAP
+    </div>
+    <div>
+  <a class="btn btn-ghost" href="index.html" style="margin:22px;">VIDEO</a>
+<!--
+  <a class="btn btn-ghost" href="index2.html" style="margin-left:22px;">EMPTY</a>
+  <a class="btn btn-ghost" href="index3.html" style="margin-left:22px;">EMPTY</a>
+-->
+    </div>
+  </nav>
+</header>
+
+<!-- BLOCK 1 : START-->
+<main>
+  <section class="hero" id="start">
+    <h1>ESP32P4 : 3D ENGINE</h1>
+    <p>On one of my projects, I worked with 3D vectors, which can be challenging to analyze, 
+particularly when dealing with complex operations and relationships. To simplify the process 
+and better understand the impact of these operations, I developed a lightweight 3D engine 
+for visualization. All operations are performed by the CPU, with no hardware acceleration, 
+making it platform-independent. However, the design is flexible, allowing for easy 
+integration of specific hardware acceleration when needed.</p>
+  </section>
+  <div class="video-wrapper">
+    <iframe 
+      src="https://www.youtube.com/embed/eFy3UlfwJag"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <pre><code>ESP32P4 silicon V1.0
+</code></pre>
+</main>
+<!-- BLOCK 1 : END-->
+
+<!-- BLOCK 2 : START-->
+<!--
+<main>
+  <section class="hero" id="start">
+    <h1>TEKST 1</h1>
+    <p>TEKST2</p>
+  </section>
+  <div class="video-wrapper">
+    <iframe 
+      src="https://www.youtube.com/embed/eFy3UlfwJag"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <pre><code>.btn-primary {
+  background: radial-gradient(circle at top left, #5b8bff, #7f5bff);
+  color: white;
+}</code></pre>
+</main>
+-->
+<!-- BLOCK 2 : END-->
+
+
+<footer>
+  © 2026 ARM-ASAP
+</footer>
+
+</body>
+</html>
